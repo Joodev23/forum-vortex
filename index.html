@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortexx Community - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="dark-theme">
+    <div id="donateModal" class="modal-overlay active">
+        <div class="modal-content modal-donate">
+            <button class="modal-close" id="closeDonate">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="donate-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+            </div>
+            <h2>Support Developer</h2>
+            <p class="donate-description">Vortexx Community. Dukung pengembangan dengan donasi.</p>
+            <div class="qris-container">
+                <img src="https://files.catbox.moe/l9y65y.jpg" alt="QRIS Donation" class="qris-image">
+            </div>
+            <p class="donate-note">Scan QRIS di atas untuk donasi</p>
+            <button class="btn-primary" id="continueBtn">Lanjutkan ke Vortexx</button>
+        </div>
+    </div>
+
+    <div class="auth-container" id="authContainer" style="display: none;">
+        <div class="auth-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/>
+                    <path d="M20 8c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm0 22c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10z"/>
+                    <path d="M20 12c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                </svg>
+                <h1>Vortexx Community</h1>
+            </div>
+            <p class="tagline">Forum modern yang elegan dan profesional</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="register">Register</button>
+        </div>
+
+
+
+        <form class="auth-form active" id="loginForm">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" required placeholder="Masukkan username">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required placeholder="Masukkan password">
+            </div>
+            <button type="submit" class="btn-primary btn-auth">Login</button>
+            <div class="auth-links">
+                <a href="#" class="forgot-password">Lupa password?</a>
+            </div>
+        </form>
+        <form class="auth-form" id="registerForm">
+            <div class="form-group">
+                <label for="regName">Nama Lengkap</label>
+                <input type="text" id="regName" required placeholder="Masukkan nama lengkap">
+            </div>
+            <div class="form-group">
+                <label for="regUsername">Username</label>
+                <input type="text" id="regUsername" required placeholder="Pilih username unik">
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" required placeholder="Buat password kuat">
+            </div>
+            <div class="form-group">
+                <label for="regConfirmPassword">Konfirmasi Password</label>
+                <input type="password" id="regConfirmPassword" required placeholder="Ulangi password">
+            </div>
+            <div class="form-group">
+                <label for="regProfilePic">Foto Profil</label>
+                <div class="profile-pic-upload">
+                    <div class="profile-pic-preview" id="profilePreview">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <input type="file" id="regProfilePic" accept="image/*" class="file-input">
+                    <label for="regProfilePic" class="btn-secondary btn-small">Pilih Foto</label>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary btn-auth">Daftar</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Dengan mendaftar, Anda menyetujui <a href="#">Syarat & Ketentuan</a></p>
+        </div>
+    </div>
+
+    <script src="js/icons.js"></script>
+    <script src="js/auth.js" type="module"></script>
+</body>
+</html>
