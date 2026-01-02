@@ -29,11 +29,7 @@
       "dest": "/$1"
     }
   ],
-  "env": {
-    "GITHUB_TOKEN": "@github_token",
-    "GITHUB_USERNAME": "@github_username",
-    "GITHUB_REPO": "@github_repo"
-  },
+   
   "buildCommand": null,
   "outputDirectory": ".",
   "devCommand": null,
